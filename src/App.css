@@ -1,17 +1,653 @@
 .app-container {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;  
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 25px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  height: 70px; /* adjust as needed */
+  width: 100%; /* ← ADD THIS */
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .hero-banner {
+  display: flex;
+  align-items: center;
   background-color: #ffffff;
-  color: #00000000;
-  padding: 18px 20px;
+  color: #000000;
   text-align: left;
+  height: 100%;
 }
 
 .hero-title {
-  font-size: 40px;
-  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.compass-icon {
+  color: #000000;
+  width: 32px;
+  height: 32px;
+  stroke: 2;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  gap: 25px;
+}
+
+.main-nav li {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.main-nav li:hover {
+  color: #6a00ff;
+}
+
+.right-group {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 0; /* This can help kill off inline whitespace issues */
+  gap: 0px;
+}
+
+.right-group .icon-menu {
+  margin-right: 2px; /* or lower, like 4px */
+  font-size: 16px; /* Restore icon size if needed */
+  position: relative;
+
+}
+
+.right-group .icon-menu:last-child {
+  margin-right: 0;
+}
+
+.menu-wrapper {
+  display: flex; /* changed from inline-flex */
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  gap: 15px;
+  margin-right: 215px;
+}
+
+.icon-menu {
+  display: flex; /* changed from inline-flex */
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  overflow: visible; /* allow any slightly overflowing parts of SVG */
+}
+
+.my-jobs-icon {
+  max-height: 20px;
+  color: #000000;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  vertical-align: middle;
+  overflow: visible;        /* <--- important */
+}
+
+.my-jobs-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 125%; /* below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.icon-menu:hover .my-jobs-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-menu {
+  display: flex; /* changed from inline-flex */
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  margin: 0;
+  flex-shrink: 0;
+  overflow: visible; /* allow any slightly overflowing parts of SVG */
+}
+
+.messages-icon {
+  max-height: 20px;
+  color: #000000;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  vertical-align: middle;
+  overflow: visible;        /* <--- important */
+}
+
+.messages-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 125%; /* below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.icon-menu:hover .messages-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-menu {
+  display: flex; /* changed from inline-flex */
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  overflow: visible; /* allow any slightly overflowing parts of SVG */
+}
+
+.notifications-icon {
+  max-height: 20px;
+  color: #000000;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  vertical-align: middle;
+  overflow: visible;        /* <--- important */
+}
+
+.notifications-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 125%; /* below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.icon-menu:hover .notifications-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-menu {
+  display: flex; /* changed from inline-flex */
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  overflow: visible; /* allow any slightly overflowing parts of SVG */
+}
+
+.account-icon {
+  max-height: 20px;
+  color: #000000;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  vertical-align: middle;
+  overflow: visible;        /* <--- important */
+  margin-right: 25px;
+}
+
+.account-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 125%; /* below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.icon-menu:hover .account-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.divider-line {
+  height: 27px;
+  border-left: 2px solid #cccccc75; /* visible gray border */
+  margin: 0 15px 0px 0px;
+}
+
+.employers-menu {
+  display: flex; /* inline-flex instead of flex */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.employers-link {
+  background-color: #fff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.slash-link {
+  background-color: #fff;
+  color: #525252;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px 2px 0px 2px;
+}
+
+.post-job-wrapper {
+  display: flex;
+  gap: 3px;
+}
+
+.post-link {
+  background-color: #fff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.job-link {
+  background-color: #fff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Optional: or center */
+  padding: 20px 65px 32px 0px;
+  gap: 6px; /* control spacing between each element */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  height: 0px;
+  gap: 0px; 
+  font-size: 15px;
+  background-color: #ffffff;
+  border: 1px solid #000;   /* Black border */
+  border-radius: 10px;      /* Rounded corners */
+  width: 300px;
+  flex-shrink: 0;
+  gap: 10px;
+  padding: 22px 25px 22px; /* Top + bottom spacing */
+}
+
+.search-box span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;           /* normalize line height */
+  white-space: nowrap;
+}
+
+.input-label {
+  margin-bottom: 3px;
+  color: #000000;
+}
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  line-height: 1;           /* match label */
+  padding: 2px 0;           /* slight top offset if needed */
+  margin: 0;
+  width: 100%;
+  color: #525252;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6a00ff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin-left: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1; /* or 1.2 for breathing room */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100px;
+  height: 50px;
+  white-space: nowrap; /* Prevent wrap */
+}
+
+.search-button:hover {
+  background-color: #6a00ff;
+}
+
+.job-header {
+  padding: 20px 0px 0px 100px;
+  background-color: #fff;
+}
+
+.job-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.job-company {
+  padding: 0px 0px 0px 100px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.company-link {
+  color: #2164f3;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.external-icon {
+  stroke: #2164f3;
+}
+
+.job-meta p {
+  padding: 0px 0px 0px 100px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.job-salary {
+  padding: 5px 0px 0px 100px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.job-extra {
+  padding: 0px 0px 0px 100px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.copy-link-button {
+  background-color: #f1f1f192;
+  height: 40px;
+  width: 40px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.copy-link-icon {
+  width: 20px;   
+  height: 20px;
+  color: #000000; 
+  transform: rotate(90deg); /* ← Try 90, -90, or 45 depending on the angle you want */
+}
+
+.location-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 125px;
+  padding-top: 20px;
+}
+
+.location-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.location-items-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.commute-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0px;
+}
+
+.commute-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.commute-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 22px;
+  vertical-align: middle;
+  fill: #525252;
+}
+
+.communte-link {
+  display: inline-block;
+  max-width: 100%;
+  margin-left: 0; /* reset the previous margin */
+  font-size: 15px;
+  font-weight: 400 !important;
+  line-height: 1.4;
+  color: #525252 !important;
+}
+
+.address-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: #2164f3;
+}
+
+.job-address-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0px;
+}
+
+.job-address-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.job-address-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 29px;
+  vertical-align: middle;
+  fill: #525252;
+}
+.job-address-only {
+  margin-left: 0; /* reset the previous margin */
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 11px;
+}
+
+.section-divider {
+  width: 35%;              /* or something like 800px */
+  margin: 0px 0px 0px 0px;       /* vertical space and center alignment */
+  border: none;
+  border-top: 1px solid #e0e0e0; /* light gray line */
+}
+
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 125px;
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+.benefits-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.benefits-subtext {
+  font-size: 14px;
+  font-weight: 500;
+  color: #525252;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.benefits-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #525252;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+}
+.section-divider {
+  width: 35%;              /* or something like 800px */
+  margin: 0px 0px 0px 0px;       /* vertical space and center alignment */
+  border: none;
+  border-top: 1px solid #e0e0e0; /* light gray line */
+}
+
+.job-description-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 125px;
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+.job-description-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.job-description-subtitle {
+  font-size: 17px;
+  font-weight: 500;
+  color: #525252;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.job-description-section p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #525252;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.job-description-section a {
+  color: #2164f3;
+  text-decoration: none;
+  font-weight: 500;
 }
