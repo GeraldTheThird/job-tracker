@@ -85,7 +85,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hardin Design
+          NextWave Studios
           <svg
             className="external-icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ function App() {
         </a>
       </div>
       <div className="job-meta">
-        <p>821 East Washington Avenue, Madison, WI 53703</p>
+        <p>88 Eastwood Ave, New York, NY 10010</p>
         <p>Hybrid work</p>
       </div>
       <div className="job-salary">$55,000 - $60,000 a year — Full-time</div>
@@ -128,11 +128,10 @@ function App() {
             <div className="commute-column">
               <h3 className="commute-title">Estimated commute</h3>
               <div className="commute-link">
-                <span style={{ fontWeight: 400, color: "#525252", fontSize: "14px" }}>
+                <span style={{ fontWeight: 400, color: "#525252", fontSize: "15px" }}>
                   <a className="address-text" href="#">Add your address</a> to estimate commute
                 </span>
               </div>
-
             </div>
           </div>
           <div className="job-address-item">
@@ -141,7 +140,7 @@ function App() {
             </svg>
             <div className="job-address-column">
               <h4 className="job-address-title">Job address</h4>
-              <div class="job-address-only">821 East Washington Avenue, Madison, WI 53703</div>
+              <div class="job-address-only">88 Eastwood Ave, New York, NY 10010</div>
             </div>
           </div>
         </div>
@@ -160,24 +159,20 @@ function App() {
         <h2 className="job-description-title">Full job description</h2>
         <h3 className="job-description-subtitle">Company Description</h3>
         <p>
-          At Hardin Design & Development, we are passionate about creating awesome software, web applications and mobile for our customers. We work with everyone, from startups to the Fortune 500 companies, and take the same degree of pride in our work no matter the client.
+          At NextWave Studios, we build sleek, modern web applications that help businesses scale and connect with users. From startups to enterprise clients, we bring the same level of care to every project — blending great UI design with reliable code. Our team focuses on creating smooth user experiences, strong accessibility, and future-proof development.
         </p>
         <p>
-          Our designers create elegant, easy to use interfaces and our developers bring cutting edge expertise to our projects, with an eye for quality, security and bug-free code.
+          Curious about our work? Explore our recent projects and learn how we help clients meet their goals at www.nextwavestudios.com — then apply to be part of our growing dev team!
         </p>
-        <p>
-          We'd love for you to check out some of our favorite projects featured in our portfolio and read about how we've helped our clients accomplish their technology goals. Visit our website at <a href="http://www.hardindd.com" target="_blank" rel="noopener noreferrer">www.hardindd.com</a> and apply to join the Hardin Team today.
-        </p>
-
         <h3 className="job-description-subtitle">Job Description</h3>
         <p>
-          ON SITE ONLY. Our company is open to hybrid models and remote work with trusted long term employees, but new hires must start out working from our Madison office.
+          We’re looking for an Entry-Level Web Developer ready to grow with a fast-moving team. You’ll work closely with designers and engineers to deliver polished, production-ready web features.
         </p>
         <p>
-          This is an entry-level web developer position at Hardin Design & Development. The pay range for this role is between $55,000 to $60,000 annually.
+          This is an entry-level web developer position at NextWave Studios. The pay range for this role is between $55,000 to $60,000 annually.
         </p>
         <p>
-          From the top down, our staff adapt quickly and confidently “wear a lot of hats”, and we highly value that in potential new team members. We believe strongly in choosing the right tool for the job, so our projects can vary widely in the tech stacks we use. We’re looking for individuals with diverse skill sets that share our passion for learning, growing, and making new things work.
+          The ideal candidate has basic knowledge of front-end tools, a love for clean code, and a drive to keep learning. If you enjoy solving problems and want to work on real-world apps, we’d love to meet you.
         </p>
       </div>
     </div>
