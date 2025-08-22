@@ -5,7 +5,6 @@ import AssistantWidget from "./components/AssistantWidget";
 function App() {
   return (
     <div className="App">
-      <h1>Job Tracker</h1>
       {<div className="app-container">
         <div className="top-bar">
           <div className="left-group">
